@@ -8,7 +8,7 @@ main {
   position: relative;
 
   header {
-    padding-top: 30px;
+    padding-top: 150px;
 
     h1 {
       color: white;
@@ -165,9 +165,10 @@ footer {
         height: 24px;
         width: 24px;
         padding-right: 15px;
-      }
-      &:hover {
-        color: #fb6087;
+
+        &:hover {
+          filter: grayscale(100%) sepia(100%); // not light red, but cool enough to change color of svg
+        }
       }
     }
   }
