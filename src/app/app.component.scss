@@ -1,0 +1,164 @@
+main {
+  background-image: url('../assets/images/bg-stars.svg'),
+    linear-gradient(to bottom, hsl(234, 17%, 12%), hsl(236, 21%, 26%));
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+  header {
+    padding-top: 30px;
+
+    h1 {
+      color: white;
+      font-size: 36px;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+  }
+
+  .countdown-clock {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: fit-content;
+        padding-right: 25px;
+
+        .card {
+          position: relative;
+          width: 150px;
+          height: 120px;
+          border-radius: 10px;
+          background-color: hsl(236, 21%, 26%);
+          box-shadow: 0 5px 0 0 hsl(234, 17%, 12%);
+        }
+
+        .card:before {
+          position: absolute;
+          content: '';
+          left: 0;
+          top: calc(50% - 6px);
+          height: 12px;
+          width: 6px;
+          background-color: hsl(234, 17%, 12%);
+          z-index: 100;
+          border-radius: 0 15px 15px 0;
+        }
+
+        .card:after {
+          position: absolute;
+          content: '';
+          right: 0;
+          top: calc(50% - 6px);
+          height: 12px;
+          width: 6px;
+          background-color: hsl(234, 17%, 12%);
+          z-index: 100;
+          border-radius: 10px 0 0 10px;
+        }
+
+        span {
+          position: relative;
+          bottom: 0;
+          display: flex;
+          place-items: center;
+          place-content: center;
+          color: #fb6087;
+          font-size: 80px;
+          font-family: 'Red Hat Text', sans-serif;
+          font-weight: 900;
+        }
+        span:after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 50%;
+          top: 50%;
+          left: 0;
+          background-color: hsl(234, 17%, 12%);
+          opacity: 0.3;
+          z-index: 100;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+          animation: flip 0.9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+        }
+
+        @keyframes flip {
+          0% {
+            transform: rotateX(0);
+          }
+
+          100% {
+            transform: rotateX(180deg);
+            top:0;
+          }
+        }
+
+        h5 {
+          color: gray;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  margin-top: -160px;
+  background-image: url('../assets/images/pattern-hills.svg');
+  width: 100vw;
+  height: 180px;
+  position: relative;
+  bottom: -20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  clear: both;
+  font-size: 17px;
+  font-weight: 800;
+  color: white;
+
+  .content {
+    margin-top: 30px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+      img {
+        height: 24px;
+        width: 24px;
+        padding-right: 15px;
+      }
+      &:hover {
+        color: #fb6087;
+      }
+    }
+  }
+
+  a { color: turquoise; }
+}
